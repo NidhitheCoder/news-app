@@ -1,7 +1,10 @@
-.card-container{
-    width: 90vw;
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
-grid-auto-rows: 300px;
+.card-container {
+  width: 80vw;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-auto-rows: 300px;
+  justify-content: center;
+  margin: 8vh auto;
+  
 }
