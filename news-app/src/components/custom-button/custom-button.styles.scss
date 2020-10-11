@@ -1,0 +1,12 @@
+.custom-button{
+    padding:5px;
+    text-align: center;
+    color:green;
+    background: red;
+    border: none;
+
+    &:hover{
+        background: green;
+        color:Red;
+    }
+}

@@ -1,9 +1,10 @@
 .App {
-  text-align: center;
+  background: #588B8B;
+  min-height:100vh;
+  width: 100%;
+  margin: auto;
   display: flex;
-  justify-content: flex-start;
-  min-height: 100vh;
-  padding: 10vw;
+  justify-content: center;
 }
 
 .App-logo {
