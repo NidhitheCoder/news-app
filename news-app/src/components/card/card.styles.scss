@@ -1,13 +1,17 @@
-.card{
-    background: #FFD5C2;
-    transition: transform 1s ease-in-out;
+.card {
+  transition: transform 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
 
-    img{
-        height: 50%;
-        width: 100%;
-    }
+  img {
+    height: 50%;
+    width: 100%;
+  }
 
-    h5{
-color: #05A8AA;
-    }
+  h5 {
+    color: #bc412b;
+    padding: 0 10px;
+    height:30px;
+    overflow: hidden;
+  }
 }

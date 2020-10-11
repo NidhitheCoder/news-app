@@ -1,6 +1,6 @@
 .App {
-  background: #BC412B;
-  min-height:100vh;
+  background: #bc412b;
+  min-height: 100vh;
   width: 100%;
   margin: auto;
   display: flex;
@@ -19,7 +19,7 @@
 }
 
 .App-header {
-  background-color: #05A8AA;
+  background-color: #05a8aa;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

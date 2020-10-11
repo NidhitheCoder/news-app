@@ -1,12 +1,15 @@
-.custom-button{
-    padding:5px;
-    text-align: center;
-    color:green;
-    background: red;
-    border: none;
 
-    &:hover{
-        background: green;
-        color:Red;
-    }
+.custom-button {
+  padding: 5px 10px;
+  text-align: center;
+  color: #bc412b;
+  background: #05a8aa;
+  border: none;
+  border-radius: 4px;
+  margin: 5px;
+
+  &:hover {
+    background: #bc412b;
+    color: #05a8aa;
+  }
 }
