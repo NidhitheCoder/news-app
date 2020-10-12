@@ -5,6 +5,7 @@ import "./card-container.styles.scss";
 class CardContainer extends React.Component {
   render() {
     const { News } = this.props;
+
     return (
       <div className="card-container">
         {News.map(article => (
