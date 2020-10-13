@@ -4,11 +4,10 @@ import "./card-container.styles.scss";
 
 class CardContainer extends React.Component {
   render() {
-    const { News } = this.props;
-
+    const { news } = this.props;
     return (
       <div className="card-container">
-        {News.map(article => (
+        {news.map(article => (
           <NewsCard title={article.title} imgUrl={article.urlToImage} />
         ))}
       </div>
