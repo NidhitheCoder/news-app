@@ -1,11 +1,12 @@
-import newsActiontypes from "./news.types";
+import newsActionTypes from "./news.types";
 
 export const setNews = newsMap => ({
-  type: newsActiontypes.UPDATE_NEWS,
+  type: newsActionTypes.UPDATE_NEWS,
   payload: newsMap
 });
 
 export const addCurrentNews = article => ({
-  type: "Need to fill from news.types in next commit",
+  type: newsActionTypes.ADD_CURRENT_NEWS,
   payload: article
 });
+
