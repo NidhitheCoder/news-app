@@ -7,8 +7,8 @@ class CardContainer extends React.Component {
     const { news } = this.props;
     return (
       <div className="card-container">
-        {news.map(article => (
-          <NewsCard title={article.title} imgUrl={article.urlToImage} />
+        {news && news.map(({title,urlToImage,...otherProps},index) => (
+          <NewsCard title={title} imgUrl={urlToImage} {...otherProps} key={index} />
         ))}
       </div>
     );

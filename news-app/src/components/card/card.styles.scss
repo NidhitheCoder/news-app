@@ -1,18 +1,20 @@
+
 .card {
   transition: transform 1s ease-in-out;
   display: flex;
   flex-direction: column;
 
   img {
-    height: 50%;
+    height: 30vh;
     width: 100%;
   }
 
   h5 {
-    color: #bc412b;
+    color: black;
     padding: 0 10px;
-    height:30px;
+    height: 8vh;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-decoration: none;
   }
 }

@@ -1,13 +1,14 @@
 import React from "react";
 import AppBar from "@material-ui/core/AppBar";
-import { MenuItem, MenuList } from "@material-ui/core";
+import {Link} from "react-router-dom"
+import './navigation.styles.scss'
 
 const NavigationBar = () => (
-  <AppBar>
-    <MenuList className="menulist">
-      <MenuItem>Home</MenuItem>
-      <MenuItem>Bookmark</MenuItem>
-    </MenuList>
+  <AppBar >
+  <div className="menulist"> 
+     <Link to="/" className="link-button">Home</Link>
+      <Link to="/bookmarks" className="link-button">Bookmark</Link>
+      </div>
   </AppBar>
 );
 

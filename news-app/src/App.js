@@ -5,6 +5,7 @@ import Header from "./components/navigation/navigation.component";
 import {Switch,Route } from "react-router-dom";
 import HomePage  from './pages/homepage/homePage.component';
 import Bookmarks from './pages/bookmarks/bookmarks.component';
+import NewsDetails  from './pages/newsDetials/news-details.component';
 
 class App extends React.Component {
 
@@ -16,6 +17,7 @@ class App extends React.Component {
      <Switch>
      <Route exact path="/" component={HomePage} />
      <Route path="/bookmarks" component={Bookmarks} />
+     <Route path="/news" component={NewsDetails} />
      </Switch>
       </div>
     );
