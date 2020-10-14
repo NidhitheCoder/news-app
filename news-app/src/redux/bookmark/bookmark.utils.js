@@ -6,10 +6,10 @@ export const addNewsTBookmark = (BookmarkCollection,article) => {
         BookmarkCollection => BookmarkCollection.title === article.title
     );
   
-    if (!existingItem) {
-        return [...BookmarkCollection, article];
+    if (existingItem) {
+        alert("Already bookmarked");
+        return BookmarkCollection;
     }
-  
-    return BookmarkCollection;
+    return [...BookmarkCollection, article];
   };
   

@@ -26,8 +26,7 @@ const NewsCard = ({
         <img src={article.urlToImage} className="img" alt="news" />
         <h5>{article.title}</h5>
         <Link
-          // caption="Bookmark"
-          className="bookmark-btn"
+          className={caption === "Remove from Bookmark" ? "bookmark-btn bookmarked":"bookmark-btn"}
           onClick={() => {
             addToBookmark(article);
           }}
