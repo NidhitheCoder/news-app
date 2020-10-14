@@ -21,7 +21,7 @@ class HomePage extends React.Component {
     const {news} = this.props;
     return (
       <div className="App">
-      <CardContainer news={news} />
+      <CardContainer news={news} caption="+ Bookmark" />
       </div>
     );
   }
