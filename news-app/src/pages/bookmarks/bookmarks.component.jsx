@@ -8,10 +8,9 @@ import {createStructuredSelector} from 'reselect'
 class bookmarks extends React.Component {
   render() {
     const {bookmark} = this.props;
-    // console.log(this.props.bookmark)
     return bookmark.length ? (
       <div className="App">
-        <CardContainer news={bookmark} caption="Remove from Bookmark" />
+        <CardContainer news={bookmark} caption="Remove from Bookmark" remove={true} />
       </div>
     ) : (
       <span className="no-bookmark"> No Bookmarks</span>

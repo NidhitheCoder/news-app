@@ -13,3 +13,16 @@ export const addNewsTBookmark = (BookmarkCollection,article) => {
     return [...BookmarkCollection, article];
   };
   
+
+  export const removeFromBookmark = (BookmarkCollection,article) =>{
+      console.log("Inside remove from bookmark page");
+      const existingItem = BookmarkCollection.find(
+          BookmarkCollection => BookmarkCollection.title === article.title
+      )
+
+      if(existingItem) {
+         return  BookmarkCollection.filter(item=> item.title !== article.title)
+      }
+
+      return BookmarkCollection;
+  }

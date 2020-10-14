@@ -4,11 +4,11 @@ import "./card-container.styles.scss";
 
 class CardContainer extends React.Component {
   render() {
-    const { news,caption } = this.props;
+    const { news,caption,remove } = this.props;
     return (
       <div className="card-container">
         {news && news.map((article,index) => (
-          <NewsCard article={article} key={index} caption={caption} />
+          <NewsCard article={article} key={index} remove={remove} caption={caption} />
         ))}
       </div>
     );
