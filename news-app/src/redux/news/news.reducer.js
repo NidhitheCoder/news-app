@@ -2,7 +2,7 @@ import newsActionTypes from "./news.types";
 
 const INITIAL_STATE = {
   news: [],
-  article:null
+  article: null
 };
 
 const newsReducer = (state = INITIAL_STATE, action) => {

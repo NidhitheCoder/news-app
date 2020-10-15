@@ -5,9 +5,8 @@ const selectCurrentNews = state => state.news;
 
 export const selectNewsCollection = createSelector(
   selectNews,
-  (news) => news.News
+  news => news.News
 );
-
 
 export const selectCurrentNewsArticle = createSelector(
   [selectCurrentNews],

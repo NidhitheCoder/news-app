@@ -9,4 +9,3 @@ export const addCurrentNews = article => ({
   type: newsActionTypes.ADD_CURRENT_NEWS,
   payload: article
 });
-
