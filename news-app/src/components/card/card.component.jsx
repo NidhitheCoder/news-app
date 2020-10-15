@@ -1,5 +1,6 @@
 import React from "react";
 import "./card.styles.scss";
+import { createStructuredSelector } from "reselect";
 // import CustomButton from "../custom-button/custom-button.component";
 import Card from "@material-ui/core/Card";
 import { Link, withRouter } from "react-router-dom";
@@ -9,16 +10,17 @@ import {
   addToBookmark,
   clearFromBookmark
 } from "../../redux/bookmark/bookmark.action";
+import { getBookmarkCollections } from "../../redux/bookmark/bookmark.selectors";
 
 const NewsCard = ({
   article,
-  caption,
-  remove,
   addCurrentNews,
   addToBookmark,
   removeFromBookmark,
-  history
+  history,
+  bookmark
 }) => {
+  const isBookmark = bookmark.find(news => news.title === article.title);
   return (
     <div
       className="link-button"
@@ -31,18 +33,22 @@ const NewsCard = ({
         <img src={article.urlToImage} className="img" alt="news" />
         <h5>{article.title}</h5>
         <Link
-          className={remove ? "bookmark-btn bookmarked" : "bookmark-btn"}
+          className={isBookmark ? "bookmark-btn bookmarked" : "bookmark-btn"}
           onClick={e => {
-            remove ? removeFromBookmark(article) : addToBookmark(article);
+            isBookmark ? removeFromBookmark(article) : addToBookmark(article);
             e.stopPropagation();
           }}
         >
-          {caption}
+          {isBookmark ? "Remove from bookmark" : "+ Add to Bookmark"}
         </Link>
       </Card>
     </div>
   );
 };
+
+const mapStateToProps = createStructuredSelector({
+  bookmark: getBookmarkCollections
+});
 
 const mapDispatchToProps = dispatch => ({
   addCurrentNews: article => dispatch(addCurrentNews(article)),
@@ -50,4 +56,6 @@ const mapDispatchToProps = dispatch => ({
   removeFromBookmark: article => dispatch(clearFromBookmark(article))
 });
 
-export default withRouter(connect(null, mapDispatchToProps)(NewsCard));
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(NewsCard)
+);
