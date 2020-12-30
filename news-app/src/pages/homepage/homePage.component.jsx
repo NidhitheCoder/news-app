@@ -18,10 +18,10 @@ class HomePage extends React.Component {
   }
 
   render() {
-    const {news} = this.props;
+    const { news } = this.props;
     return (
       <div className="App">
-      <CardContainer news={news} />
+        <CardContainer news={news} />
       </div>
     );
   }
